@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>พูลวิลล่า บุ๊คกิ้ง</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#eefaff;--card:#fff;--tx:#1f3a52;--mu:#5f7a8f;--pr:#0b8fb0;--pr2:#dff6fb;--bd:#cfeaf2;--ok:#15803d;--er:#b91c1c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a24;--card:#16262f;--tx:#e6eef4;--mu:#9fb0bf;--pr:#38bdf8;--pr2:#12384a;--bd:#2a3f4d;--ok:#4ade80;--er:#f87171;color-scheme:dark}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg) radial-gradient(circle at 8% 40%,rgba(255,196,120,.28),transparent 35%),radial-gradient(circle at 95% 60%,rgba(80,200,230,.25),transparent 35%);background-attachment:fixed;color:var(--tx);font-family:"Mali","Noto Sans Thai",system-ui,sans-serif;line-height:1.55}
+header{position:relative;overflow:hidden;margin:0 0 18px;padding:34px 16px 58px;text-align:center;background:linear-gradient(180deg,#5fd3f3,#a8ecf7 70%,#fff3c4);color:#0b3a52}
+.cl{position:absolute;animation:fl 5s ease-in-out infinite alternate}
+@keyframes fl{to{transform:translateY(8px)}}
+@media (prefers-reduced-motion:reduce){.cl{animation:none}.card{transition:none!important}}
+.wv{position:absolute;left:0;bottom:-1px;width:100%;height:28px}
+h1{margin:0;font-size:1.9rem;text-shadow:0 2px 0 #fff8}header p{margin:6px 0 0;color:#1c5a78}
+main{max-width:1000px;margin:auto;padding:0 14px 40px}
+.bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;background:var(--card);border:2px dashed #7fdcf0;border-radius:22px;padding:16px;box-shadow:0 8px 24px #0ea5c61f}
+label{font-size:.8rem;color:var(--mu);display:block}
+input,select{width:100%;padding:9px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--tx);font:inherit}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;margin:16px 0}
+.card{background:var(--card);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 8px 22px #0b8fb024;transition:transform .2s}.card:hover{transform:translateY(-5px)}
+.pic{height:150px;overflow:hidden}.pic svg{display:block;width:100%;height:100%}.box .pic{border-radius:18px;height:170px}
+.cb{padding:12px 14px;flex:1;display:flex;flex-direction:column;gap:6px}
+.cb h3{margin:0;font-size:1.05rem}.mu{color:var(--mu);font-size:.85rem}
+.tag{display:inline-block;background:var(--pr2);color:#0b7391;border-radius:99px;padding:1px 10px;font-size:.75rem;margin:0 4px 4px 0}.tag:nth-child(3n+2){background:#ffe8dc;color:#c2501b}.tag:nth-child(3n){background:#e6f8d9;color:#3b8420}
+.price{font-weight:700}
+button{font:inherit;cursor:pointer;border:0;border-radius:99px;padding:10px 18px;background:linear-gradient(135deg,#0ea5c6,#22c3a6);color:#fff;font-weight:700}button:hover{filter:brightness(1.07)}
+button.sec{background:var(--pr2);color:var(--pr)}button.dn{background:transparent;color:var(--er);padding:4px 8px}
+.st{font-size:.8rem;font-weight:600}.ok{color:var(--ok)}.er{color:var(--er)}
+#modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:flex-start;justify-content:center;overflow:auto;padding:16px;z-index:5}
+#modal.on{display:flex}
+.box{background:var(--card);border-radius:16px;max-width:560px;width:100%;padding:18px;margin:auto}
+.row{display:flex;justify-content:space-between;gap:10px;padding:3px 0}
+.sum{background:var(--bg);border-radius:10px;padding:10px 12px;margin:10px 0}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0}
+.chk{display:flex;gap:8px;align-items:center;padding:4px 0;font-size:.9rem;color:var(--tx)}.chk input{width:auto}
+h2{font-size:1.15rem;margin:24px 0 8px}
+.bk{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:10px 14px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<header><svg class="cl" style="left:6%;top:18px" width="90" height="40" viewBox="0 0 90 40"><ellipse cx="30" cy="26" rx="26" ry="12" fill="#fff"/><ellipse cx="55" cy="20" rx="22" ry="14" fill="#fff"/></svg><svg class="cl" style="right:5%;top:10px;animation-delay:-2s" width="64" height="64" viewBox="0 0 64 64"><circle cx="32" cy="32" r="16" fill="#ffd93b"/><g stroke="#ffd93b" stroke-width="4" stroke-linecap="round"><path d="M32 4v8M32 52v8M4 32h8M52 32h8M12 12l6 6M46 46l6 6M52 12l-6 6M18 46l-6 6"/></g></svg><h1>🏝️ พูลวิลล่า บุ๊คกิ้ง</h1><p>จองวิลล่าส่วนตัวทั้งหลัง สระว่ายน้ำสุดฟิน เลือกวัน ดูราคา จองได้ทันที 🌴</p><svg class="wv" viewBox="0 0 400 30" preserveAspectRatio="none"><path d="M0 14c25-14 50-14 75 0s50 14 75 0 50-14 75 0 50 14 75 0 50-14 75 0V30H0z" fill="var(--bg)"/></svg></header>
+<main>
+<div class="bar">
+<div><label>จังหวัด</label><select id="fp"><option value="">ทั้งหมด</option></select></div>
+<div><label>เช็คอิน</label><input type="date" id="fi"></div>
+<div><label>เช็คเอาท์</label><input type="date" id="fo"></div>
+<div><label>จำนวนผู้เข้าพัก</label><input type="number" id="fg" min="1" value="6"></div>
+<div><label>งบสูงสุด/คืน</label><input type="number" id="fm" step="500" placeholder="ไม่จำกัด"></div>
+</div>
+<div class="grid" id="list"></div>
+<h2>🎟️ การจองของฉัน</h2>
+<div id="mine"></div>
+</main>
+<div id="modal"><div class="box" id="box"></div></div>
+<script>
+const V=[
+{id:1,name:"ซีบรีซ พูลวิลล่า",prov:"หัวหิน",bed:3,base:6,max:10,wd:6500,we:8500,clean:800,pool:"สระน้ำเค็ม",tags:["ใกล้ทะเล","คาราโอเกะ"],e:"🏖️",g:"#0ea5e9,#67e8f9",bk:[["2026-11-20","2026-11-23"],["2026-12-05","2026-12-07"]]},
+{id:2,name:"เขาใหญ่ ฮิลล์เฮาส์",prov:"เขาใหญ่",bed:4,base:8,max:12,wd:7800,we:10500,clean:1000,pool:"สระอุ่น",tags:["วิวภูเขา","เตาบาร์บีคิว","รับสัตว์เลี้ยง"],e:"⛰️",g:"#16a34a,#bef264",bk:[["2026-11-14","2026-11-16"]]},
+{id:3,name:"พัทยา แกรนด์พูล",prov:"พัทยา",bed:5,base:10,max:16,wd:11000,we:15000,clean:1500,pool:"สระใหญ่ 12 ม.",tags:["โต๊ะพูล","คาราโอเกะ","สไลเดอร์"],e:"🎉",g:"#a855f7,#f0abfc",bk:[["2026-11-27","2026-11-30"]]},
+{id:4,name:"ภูเก็ต ซันเซ็ต วิลล่า",prov:"ภูเก็ต",bed:2,base:4,max:6,wd:9000,we:11000,clean:900,pool:"อินฟินิตี้พูล",tags:["วิวพระอาทิตย์ตก","ใกล้ทะเล"],e:"🌅",g:"#f97316,#fde047",bk:[]}];
+const EX=[["bbq","เตาปิ้งย่าง + ถ่าน",600,"stay"],["chef","เชฟส่วนตัว (ต่อคน)",450,"pp"],["bday","ตกแต่งวันเกิด",1200,"stay"],["van","รถรับส่งสนามบิน/สถานี",1500,"stay"]];
+const DEP=3000,PCT=0.5;
+const $=i=>document.getElementById(i);
+const fmt=n=>"฿"+Math.round(n).toLocaleString("th-TH");
+const d2=s=>new Date(s+"T00:00:00");
+const iso=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const today=iso(new Date());
+let mine=[];
+try{mine=JSON.parse(localStorage.getItem("pv_bookings")||"[]")}catch(e){}
+function save(){try{localStorage.setItem("pv_bookings",JSON.stringify(mine))}catch(e){}}
+function taken(v,a,b){return v.bk.concat(mine.filter(m=>m.vid===v.id).map(m=>[m.in,m.out])).some(r=>a<r[1]&&b>r[0])}
+function nights(a,b){const r=[];for(let d=d2(a);d<d2(b);d.setDate(d.getDate()+1))r.push(new Date(d));return r}
+function quote(v,a,b,g,ex){
+ const ns=nights(a,b);let room=0;
+ ns.forEach(d=>{const w=d.getDay()===5||d.getDay()===6;room+=w?v.we:v.wd});
+ const extra=Math.max(0,g-v.base)*500*ns.length;
+ let add=0;EX.forEach(x=>{if(ex.includes(x[0]))add+=x[3]==="pp"?x[2]*g:x[2]});
+ const total=room+extra+v.clean+add;
+ return{n:ns.length,room,extra,add,clean:v.clean,total,dep:Math.round(total*PCT)};
+}
+function valid(){const a=$("fi").value,b=$("fo").value;return a&&b&&b>a}
+function art(v){
+ const[c1,c2]=v.g.split(","),gr=v.id===2?"#b8f2a0":"#ffe6ad";
+ const bg={1:'<path d="M0 100q25-12 50 0t50 0 50 0 50 0 50 0 50 0V112H0z" fill="#fff" opacity=".6"/>',2:'<polygon points="0,105 60,55 110,95 170,35 240,105" fill="#4ade80"/><polygon points="170,35 158,50 166,47 170,52 176,47 183,50" fill="#fff"/>',3:'<g stroke="#fff" stroke-width="1.5"><path d="M45 48v40M72 38v50M255 52v40"/></g><circle cx="45" cy="40" r="9" fill="#ff6b81"/><circle cx="72" cy="30" r="9" fill="#ffd93b"/><circle cx="255" cy="44" r="9" fill="#a78bfa"/>',4:'<circle cx="150" cy="92" r="40" fill="#fff3a0" opacity=".85"/>'}[v.id]||"";
+ return `<svg viewBox="0 0 300 150" preserveAspectRatio="xMidYMid slice" role="img" aria-label="ภาพประกอบ ${v.name}"><defs><linearGradient id="s${v.id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs><rect width="300" height="150" fill="url(#s${v.id})"/>${v.id===4?"":'<circle cx="250" cy="32" r="15" fill="#fff6a8"/>'}<ellipse cx="60" cy="28" rx="22" ry="8" fill="#fff" opacity=".85"/><ellipse cx="78" cy="24" rx="16" ry="9" fill="#fff" opacity=".85"/>${bg}<rect y="104" width="300" height="46" fill="${gr}"/><path d="M40 112q4-30 0-52" stroke="#a9733a" stroke-width="5" fill="none" stroke-linecap="round"/><g fill="#34c26b"><ellipse cx="28" cy="58" rx="16" ry="6" transform="rotate(-20 28 58)"/><ellipse cx="54" cy="58" rx="16" ry="6" transform="rotate(20 54 58)"/><ellipse cx="41" cy="50" rx="6" ry="14"/></g><rect x="95" y="72" width="110" height="40" rx="8" fill="#fff"/><path d="M85 74L150 40l65 34z" fill="#ff8a5b"/><circle cx="128" cy="88" r="5" fill="#1f3a52"/><circle cx="172" cy="88" r="5" fill="#1f3a52"/><path d="M138 98q12 10 24 0" stroke="#1f3a52" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="116" cy="97" r="5" fill="#ffb3c1" opacity=".8"/><circle cx="184" cy="97" r="5" fill="#ffb3c1" opacity=".8"/><rect x="70" y="118" width="170" height="26" rx="13" fill="#5fd8f0" stroke="#fff" stroke-width="3"/><path d="M90 131q8-6 16 0t16 0 16 0 16 0 16 0 16 0" stroke="#fff" stroke-width="2.5" fill="none" opacity=".8"/></svg>`;
+}
+function render(){
+ const p=$("fp").value,g=+$("fg").value||1,m=+$("fm").value||1e9,ok=valid(),a=$("fi").value,b=$("fo").value;
+ const L=V.filter(v=>(!p||v.prov===p)&&v.max>=g&&v.wd<=m);
+ $("list").innerHTML=L.length?L.map(v=>{
+  const t=ok?(taken(v,a,b)?'<span class="st er">ไม่ว่างในช่วงที่เลือก</span>':'<span class="st ok">ว่าง</span>'):"";
+  return `<div class="card"><div class="pic">${art(v)}</div><div class="cb"><h3>${v.name}</h3>
+  <div class="mu">📍 ${v.prov} · 🛏️ ${v.bed} ห้องนอน · 👥 ${v.base}–${v.max} คน</div>
+  <div>${v.tags.concat(v.pool).map(x=>`<span class="tag">${x}</span>`).join("")}</div>
+  <div class="price">${fmt(v.wd)} <span class="mu">/คืน (จ.–พฤ., อา.)</span></div>${t}
+  <button style="margin-top:auto" onclick="openV(${v.id})">ดูรายละเอียด / จอง</button></div></div>`}).join(""):'<p class="mu">ไม่พบวิลล่าตามเงื่อนไข ลองปรับตัวกรองดูนะครับ</p>';
+ $("mine").innerHTML=mine.length?mine.map(m=>`<div class="bk"><div><b>${m.code}</b> · ${m.vname}<div class="mu">${m.in} → ${m.out} · ${m.g} คน · ยอดรวม ${fmt(m.total)}</div></div><button class="dn" onclick="cancel('${m.code}')">ยกเลิก</button></div>`).join(""):'<p class="mu">ยังไม่มีการจอง</p>';
+}
+function openV(id){
+ const v=V.find(x=>x.id===id);
+ $("box").innerHTML=`<div class="pic">${art(v)}</div>
+ <h2 style="margin-top:12px">${v.name}</h2>
+ <div class="mu">📍 ${v.prov} · ${v.bed} ห้องนอน · รับ ${v.base} คน (สูงสุด ${v.max}) · ${v.pool}</div>
+ <div style="margin:6px 0">${v.tags.map(x=>`<span class="tag">${x}</span>`).join("")}</div>
+ <div class="mu">🕒 เช็คอิน 14:00 · เช็คเอาท์ 12:00 · ห้ามเสียงดังหลัง 22:00 · ห้ามแขกเยี่ยม · ห้ามสูบบุหรี่ในบ้าน · คนเกินคิด ฿500/คน/คืน</div>
+ <div class="mu">📅 วันที่ไม่ว่าง: ${v.bk.length?v.bk.map(r=>r[0]+" ถึง "+r[1]).join(", "):"ไม่มี"}</div>
+ <div class="f2"><div><label>เช็คอิน</label><input type="date" id="bi" min="${today}" value="${$("fi").value}"></div>
+ <div><label>เช็คเอาท์</label><input type="date" id="bo" min="${today}" value="${$("fo").value}"></div>
+ <div><label>จำนวนผู้เข้าพัก</label><input type="number" id="bg" min="1" max="${v.max}" value="${Math.min($("fg").value||v.base,v.max)}"></div>
+ <div><label>ชื่อผู้จอง</label><input id="bn" placeholder="ชื่อ-นามสกุล"></div>
+ <div style="grid-column:1/-1"><label>เบอร์โทร</label><input id="bt" inputmode="tel" placeholder="08x-xxx-xxxx"></div></div>
+ <label>บริการเสริม</label>${EX.map(x=>`<label class="chk"><input type="checkbox" value="${x[0]}"> ${x[1]} (${fmt(x[2])})</label>`).join("")}
+ <div class="sum" id="sum"></div><div id="msg" class="st er"></div>
+ <div style="display:flex;gap:8px;margin-top:10px"><button id="go">ยืนยันการจอง</button><button class="sec" onclick="closeM()">ปิด</button></div>`;
+ $("modal").classList.add("on");
+ const upd=()=>{
+  const a=$("bi").value,b=$("bo").value,g=+$("bg").value||1,ex=[...$("box").querySelectorAll(".chk input:checked")].map(x=>x.value);
+  if(!(a&&b&&b>a)){$("sum").innerHTML='<span class="mu">เลือกวันเช็คอินและเช็คเอาท์เพื่อดูราคา</span>';return null}
+  if(g>v.max){$("sum").innerHTML='<span class="er">เกินจำนวนที่รับได้สูงสุด '+v.max+' คน</span>';return null}
+  if(taken(v,a,b)){$("sum").innerHTML='<span class="er">ช่วงวันที่เลือกไม่ว่าง กรุณาเลือกวันอื่น</span>';return null}
+  const q=quote(v,a,b,g,ex);
+  $("sum").innerHTML=`<div class="row"><span>ค่าห้อง ${q.n} คืน</span><span>${fmt(q.room)}</span></div>
+  <div class="row"><span>ค่าคนเกิน</span><span>${fmt(q.extra)}</span></div>
+  <div class="row"><span>บริการเสริม</span><span>${fmt(q.add)}</span></div>
+  <div class="row"><span>ค่าทำความสะอาด</span><span>${fmt(q.clean)}</span></div>
+  <div class="row"><b>ยอดรวม</b><b>${fmt(q.total)}</b></div>
+  <div class="row"><span>มัดจำ 50% (ชำระวันนี้)</span><b>${fmt(q.dep)}</b></div>
+  <div class="row mu"><span>เงินประกันความเสียหาย (คืนหลังตรวจบ้าน)</span><span>${fmt(DEP)}</span></div>`;
+  return{a,b,g,q};
+ };
+ $("box").addEventListener("input",upd);upd();
+ $("go").onclick=()=>{
+  const r=upd(),n=$("bn").value.trim(),t=$("bt").value.trim();
+  if(!r){$("msg").textContent="กรุณาตรวจสอบวันที่และจำนวนผู้เข้าพัก";return}
+  if(n.length<2||!/^[0-9\-\s+]{9,15}$/.test(t)){$("msg").textContent="กรุณากรอกชื่อและเบอร์โทรให้ถูกต้อง";return}
+  const code="PV"+Math.random().toString(36).slice(2,7).toUpperCase();
+  mine.push({code,vid:v.id,vname:v.name,in:r.a,out:r.b,g:r.g,total:r.q.total,name:n});save();render();
+  $("box").innerHTML=`<h2>✅ จองสำเร็จ</h2><p>รหัสการจอง <b>${code}</b><br>${v.name}<br>${r.a} → ${r.b} · ${r.g} คน</p>
+  <div class="sum"><div class="row"><span>ยอดรวม</span><span>${fmt(r.q.total)}</span></div>
+  <div class="row"><span>มัดจำที่ต้องชำระ</span><b>${fmt(r.q.dep)}</b></div>
+  <div class="row"><span>ยอดคงเหลือ (ชำระก่อนเช็คอิน 7 วัน)</span><span>${fmt(r.q.total-r.q.dep)}</span></div></div>
+  <p class="mu">นี่เป็นระบบตัวอย่าง ข้อมูลเก็บในเบราว์เซอร์ของคุณเท่านั้น ไม่มีการตัดเงินจริง</p><button onclick="closeM()">ปิด</button>`;
+ };
+}
+function closeM(){$("modal").classList.remove("on")}
+function cancel(c){if(confirm("ยกเลิกการจอง "+c+" ?")){mine=mine.filter(m=>m.code!==c);save();render()}}
+$("modal").addEventListener("click",e=>{if(e.target.id==="modal")closeM()});
+[...new Set(V.map(v=>v.prov))].forEach(p=>$("fp").insertAdjacentHTML("beforeend",`<option>${p}</option>`));
+$("fi").min=$("fo").min=today;
+["fp","fi","fo","fg","fm"].forEach(i=>$(i).addEventListener("input",render));
+render();
+</script>
+</body>
+</html>
